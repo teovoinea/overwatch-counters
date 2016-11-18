@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+//! Stars
+// -----------------------------------------------------------------------------
+
+.star {
+	width:16px;
+	height:16px;
+	background: #ccc;
+	display: inline-block;
+	margin:0 4px;
+	border-radius: 50%;
+}
+
+.score-1 .stars .star:nth-child(-n+1){
+	background:goldenrod;
+}
+
+.score-2 .stars .star:nth-child(-n+2){
+	background:goldenrod;
+}
+
+.score-3 .stars .star:nth-child(-n+3){
+	background:goldenrod;
+}
+
+.score-4 .stars .star:nth-child(-n+4){
+	background:goldenrod;
+}
+
+.score-5 .stars .star:nth-child(-n+5){
+	background:goldenrod;
+}
+
+.score-6 .stars .star:nth-child(-n+6){
+	background:goldenrod;
+}

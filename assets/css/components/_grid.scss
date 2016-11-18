@@ -1,0 +1,85 @@
+// -----------------------------------------------------------------------------
+//! Grid
+// -----------------------------------------------------------------------------
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: top;	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.grid-box {
+	width:25%;
+	display: block;
+	padding:4px;
+	max-width:128px;
+	@include respond($breakpoint-team-grid-small) {
+		padding:8px;
+	}
+}
+
+.grid-box .grid-box-inner {
+	padding-bottom:89%;
+	position: relative;
+	cursor: pointer;
+	background-color: rgba(51,51,51,0.2);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: bottom right;	
+	border-radius: 3px;
+}
+
+.team-grid .grid-box {
+	width:33%;
+	max-width:64px;
+	@include respond($breakpoint-team-grid-small) {
+		max-width: 96px;
+	}
+	@include respond($breakpoint-team-grid-six) {
+		max-width: 128px;
+	}
+}
+
+.team-grid .grid-box .grid-box-inner {
+	cursor: default;
+	background-color:rgba(255,255,255,0.3);
+}
+
+.team-grid .grid-box.has-hero .grid-box-inner {
+	cursor: pointer;
+}
+
+.team-grid.is-sticky .grid-box {
+	width:16%;
+	max-width: 64px;
+}
+
+
+// -----------------------------------------------------------------------------
+//! Hover for non-touch things on team grid
+// -----------------------------------------------------------------------------
+
+.team-grid .grid-box.has-hero .grid-box-inner:before {
+	content:"";
+	position: absolute;
+	top:-2px;
+	right:-2px;
+	width:12px;
+	height:12px;
+	background:url(../svg/close.svg) no-repeat center center;
+	background-size:12px 12px;
+	opacity: 0.8;
+	transition: opacity 0.2s ease;
+	@include respond($breakpoint-team-grid-six) {
+		width:16px;
+		height:16px;
+		background-size:16px 16px;
+	}
+}
+
+.no-touchevents .team-grid .grid-box.has-hero .grid-box-inner:hover:before {
+	opacity: 1;
+}
+

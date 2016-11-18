@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+//! GENERAL
+// -----------------------------------------------------------------------------
+
+html {
+	height: 100%;
+	background:$color-off-white;
+}
+
+body {
+	position: relative;
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+body.has-results {
+	//overflow: hidden;
+}
+
+.container {
+	width:100%;
+	max-width: 1060px;
+	padding:0 16px;
+	margin:0 auto;
+}
+

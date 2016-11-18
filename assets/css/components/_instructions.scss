@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+//! Instructions
+// -----------------------------------------------------------------------------
+
+.instructions {
+	max-width: 520px;
+	text-align: center;
+	@include respond($breakpoint-team-grid-six) {
+		max-width: 600px;	
+	}
+}
+
+.instructions p {
+	margin:0 0 1em 0;
+	font-size:0.875em;
+	@include respond($breakpoint-team-grid-small) {
+		font-size:1em;
+		margin-bottom:1.5em;
+	}
+	@include respond($breakpoint-team-grid-six) {
+		margin-bottom: 2em;
+	}
+}

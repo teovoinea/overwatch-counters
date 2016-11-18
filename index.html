@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+	<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+		<!-- Meta Info -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">		
+		<meta name="description" content="Site Description">
+		<meta name="og:title" content="Site Name">
+		<meta name="og:description" content="Site Description">
+		<!--<meta name="og:image" content=""> -->
+		
+		<title>CW</title>
+		
+		<!-- CSS -->		
+		<link rel="stylesheet" type="text/css" href="/build/css/style.css">
+		<!--
+			Needs to: 
+			+ Present user with list of heroes
+			+ User can select hero
+			+ Hero added to active list
+			+ Max of 6 heroes
+			+ Clicking hero in active list removes it
+			+ User can add multiple of the same hero
+			+ Calculate button
+			+ After button clicked, displays top hero to pick
+			
+			Basic logic:
+			+ Each hero has list of heroes it does well against and heroes it does poorly against attached to it.
+			+ When calculate button is hit, these lists are combined
+			+ Top "strong against" and top "weak against" are tallied
+			+ Display top 3 heroes to use (or more if ties)
+			+ Display top 3 heroes to avoid (or more if ties)
+			+ Potentially offer an advanced one for each category
+		-->
+
+	</head>
+<body>
+
+	<section class="team">
+		<div class="team-grid-placeholder"></div>
+		<div class="container grid team-grid">
+			<div class="grid-box">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box">
+				<div class="grid-box-inner"></div>
+			</div>
+		</div><!--end .container-->
+		<div class="container button-container team-button-container">
+			<button class="btn" id="calculate">Calculate</button>
+		</div><!--end .container-->
+	</section><!--end .team-->
+	
+	<section class="hero">
+		<div class="container instructions">
+			<p>Select the heroes on the team you are facing below, then hit calculate to see suggestions for which hero&nbsp;to&nbsp;use.</p>
+		</div><!--end .container-->
+		<div class="container grid hero-grid">
+			<div class="grid-box genji" data-name="genji">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box mccree" data-name="mccree">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box pharah" data-name="pharah">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box reaper" data-name="reaper">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box soldier" data-name="soldier">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box sombra" data-name="sombra">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box tracer" data-name="tracer">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box bastion" data-name="bastion">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box hanzo" data-name="hanzo">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box junkrat" data-name="junkrat">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box mei" data-name="mei">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box torbjorn" data-name="torbjorn">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box widowmaker" data-name="widowmaker">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box dva" data-name="dva">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box reinhardt" data-name="reinhardt">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box roadhog" data-name="roadhog">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box winston" data-name="winston">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box zarya" data-name="zarya">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box ana" data-name="ana">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box lucio" data-name="lucio">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box mercy" data-name="mercy">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box symmetra" data-name="symmetra">
+				<div class="grid-box-inner"></div>
+			</div>
+			<div class="grid-box zenyatta" data-name="zenyatta">
+				<div class="grid-box-inner"></div>
+			</div>
+		</div><!--end .container-->
+	</section><!--end .heros-->
+
+	<div class="results-overlay" tabindex="-1"></div><!--end .results-overlay-->
+	<div class="results">
+		<div class="results-inner">
+			<div class="results-inner-list">
+				
+			</div><!--end .results-inner-list-->
+			<div class="container button-container">
+				<button class="btn" id="results-close">Bring me Another!</button>
+			</div><!--end .container-->
+		</div><!--end .results-inner-->
+	</div><!--end .results-->
+
+
+	<footer>
+		<div class="container">
+			<p>Made by <a href="http://ryanspilhaus.com" target="_blank">Ryan Spilhaus</a></p>
+			<p>All Overwatch stuff is owned by Blizzard and not me, obviously. Use of this site does not guarantee you a win, make you a better player, or convince the Hanzo on your team to play the objective. And please, if there&rsquo;s not a support on your team - play support.</p>
+		</div><!--end .container-->
+	</footer><!--end footer-->
+
+
+
+<!-- Javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+<script src="/build/js/production.min.js"></script>	
+</body>	
+</html>
+	
+	
+	

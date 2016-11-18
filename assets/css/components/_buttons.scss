@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+//! Buttons
+// -----------------------------------------------------------------------------
+
+.button-container {
+	padding-top:24px;
+}
+.btn {
+	background:$color-orange;
+	padding:16px 24px 8px 24px;
+	color:#fefefe;
+	display: block;
+	width:auto;
+	margin:0 auto 0 auto;
+	border-radius: 2px;
+	font-size:1.25em;
+	font-weight: 700;
+	line-height:1;
+	cursor: pointer;
+	transition:all 0.2s ease;
+	font-family: $font-noodle;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	@include respond($breakpoint-small-buttons) {
+		font-size:1.5em;
+		padding:16px 32px 8px 32px;
+	}
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.btn:hover {
+	background: darken($color-orange, 2%);
+}

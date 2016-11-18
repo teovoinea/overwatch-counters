@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+//! Footer
+// -----------------------------------------------------------------------------
+
+footer {
+	background: $color-blue-dark;
+	color:#fefefe;
+	padding:16px 0;
+}
+
+footer p {
+	font-size:0.75em;
+	max-width: 600px;
+}
+
+footer p a {
+	color: $color-orange;
+}
+
+footer p a:hover {
+	text-decoration: none;
+	color: darken($color-orange, 2%);
+}

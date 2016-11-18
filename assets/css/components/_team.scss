@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+//! Team Selected Area
+// -----------------------------------------------------------------------------
+
+.team {
+	padding:24px 0;
+	background: $color-blue-dark;
+}
+
+.team-grid {
+	max-width: 240px;
+	padding:0;
+	@include respond($breakpoint-team-grid-small) {
+		max-width: 336px;	
+	}
+	@include respond($breakpoint-team-grid-six) {
+		max-width: 1200px;
+	}
+}
+
+.team-grid-placeholder {
+	height:0;
+	width:100%;
+}
+
+.team-grid.is-sticky {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	max-width: none;
+	background: $color-blue-dark;
+	z-index: $z_index-level4;
+	padding:8px 0;
+	
+}

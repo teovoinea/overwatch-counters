@@ -1,2 +1,13 @@
-.sass-cache/
-*.css.map
+#Ignore Generated/System Files
+.sass-cache
+*.unprefixed.css
+*.map
+.log
+.DS_Store
+
+#Ignore Grunt Files
+node_modules
+npm-debug.log
+
+#Site Specific Files
+.htaccess
