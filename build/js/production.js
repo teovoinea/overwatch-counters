@@ -141,9 +141,9 @@ $(document).ready(function() {
 				   pickArray.push("zarya");
 			    }
 			    if(teamArray[i] === "sombra"){
+				   //At this point it's kinda ¯\_(ツ)_/¯ - let me know if you have suggestions and why.
 				   pickArray.push("winston");
 				   pickArray.push("soldier");
-				   pickArray.push("mercy");
 				   pickArray.push("hanzo");
 			    }
 			    if(teamArray[i] === "tracer"){
@@ -296,13 +296,10 @@ $(document).ready(function() {
 				   pickArray.push("soldier");
 				   pickArray.push("sombra");
 			    }
-			}
-	
-			//Values of pickArray
-			//console.log(pickArray);		
+			}	
 			
 			//Count Values and sort by count
-			//http://stackoverflow.com/questions/19464440/jquery-javascript-sort-array-by-highest-count
+			//Thanks http://stackoverflow.com/questions/19464440/jquery-javascript-sort-array-by-highest-count
 			
 			var histogramMap = {};
 			
@@ -319,7 +316,7 @@ $(document).ready(function() {
 			histogram.forEach( function (arrayItem){
 			    var pickKey = arrayItem.key;
 			    var pickScore = arrayItem.freq;
-			    //Just show the top 6
+			    //Just show the top 6 because I'm arbitrary that way.
 				if(iterationCount <= 6){
 				    $('<div class="result-box score-' + pickScore + '"><div class="result-portrait '+ pickKey + '"></div><div class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div></div>')
 				    .appendTo(".results-inner-list");

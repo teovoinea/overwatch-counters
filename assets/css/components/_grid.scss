@@ -29,6 +29,11 @@
 	background-size: 100% auto;
 	background-position: bottom right;	
 	border-radius: 3px;
+	transition:background 0.2s ease;
+	
+	&:hover {
+		background-color: $color-orange;
+	}
 }
 
 .team-grid .grid-box {
