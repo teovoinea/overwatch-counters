@@ -355,7 +355,7 @@ $(function() {
     function setHeight(){
 		teamHeight = $(".team").innerHeight();
 		buttonHeight = $(".team-button-container").innerHeight();
-		teamHeight = teamHeight - buttonHeight - 24;
+		teamHeight = teamHeight - buttonHeight - 84;
 		teamGridHeight = $(".team-grid").innerHeight();	    
     }
 
@@ -383,6 +383,7 @@ $(function() {
             $(".team-grid-placeholder").innerHeight(0);
         }
     });
+    
     
     
 });
