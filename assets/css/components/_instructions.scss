@@ -15,9 +15,16 @@
 	font-size:0.875em;
 	@include respond($breakpoint-team-grid-small) {
 		font-size:1em;
-		margin-bottom:1.5em;
 	}
-	@include respond($breakpoint-team-grid-six) {
-		margin-bottom: 2em;
+	
+	&:last-child {
+		@include respond($breakpoint-team-grid-small) {
+			margin-bottom:1.5em;
+		}
+		@include respond($breakpoint-team-grid-six) {
+				margin-bottom:2em;
+		}
 	}
+	
+	
 }
