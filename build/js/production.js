@@ -358,7 +358,7 @@ $(function() {
     function setHeight(){
 		teamHeight = $(".team").innerHeight();
 		buttonHeight = $(".team-button-container").innerHeight();
-		teamHeight = teamHeight - buttonHeight - 80;
+		teamHeight = teamHeight - buttonHeight - 24;
 		teamGridHeight = $(".team-grid").innerHeight();	    
     }
 
