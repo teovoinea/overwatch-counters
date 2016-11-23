@@ -104,7 +104,6 @@ $(document).ready(function() {
 			var teamArrayLength = teamArray.length;
 			for (var i = 0; i < teamArrayLength; i++) {
 			    if(teamArray[i] === "genji"){
-				   pickArray.push("pharah");
 				   pickArray.push("symmetra");
 				   pickArray.push("mei");
 				   pickArray.push("tracer");
@@ -112,17 +111,15 @@ $(document).ready(function() {
 				   pickArray.push("lucio");
 				   pickArray.push("winston");
 				   pickArray.push("dva");
-				   pickArray.push("torbjorn");
 			    }
 			    if(teamArray[i] === "mccree"){
 				   pickArray.push("bastion");
 				   pickArray.push("widowmaker");
 				   pickArray.push("hanzo");
 				   pickArray.push("zarya");
-				   pickArray.push("torbjorn");
 			    }
 			    if(teamArray[i] === "pharah"){
-				   pickArray.push("roadhog");
+				   pickArray.push("zenyatta");
 				   pickArray.push("widowmaker");
 				   pickArray.push("soldier");
 				   pickArray.push("mccree");
@@ -189,7 +186,6 @@ $(document).ready(function() {
 				   pickArray.push("pharah");
 				   pickArray.push("zarya");
 				   pickArray.push("widowmaker");
-				   pickArray.push("mercy");
 				   pickArray.push("lucio");
 			    }
 			    if(teamArray[i] === "torbjorn"){
@@ -200,6 +196,7 @@ $(document).ready(function() {
 				   pickArray.push("junkrat");
 				   pickArray.push("winston");
 				   pickArray.push("reinhardt");
+				   pickArray.push("sombra");
 			    }
 			    if(teamArray[i] === "widowmaker"){
 				   pickArray.push("tracer");
@@ -277,7 +274,6 @@ $(document).ready(function() {
 				   pickArray.push("genji");
 				   pickArray.push("winston");
 				   pickArray.push("dva");
-				   pickArray.push("hanzo");
 			    }
 			    if(teamArray[i] === "symmetra"){
 				   pickArray.push("pharah");
