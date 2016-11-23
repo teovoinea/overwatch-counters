@@ -57,7 +57,7 @@ Here is a list of each hero and who the system suggests that you should use agai
 * Soldier: 76
 * Hanzo
 
-_Honestly who really knows at this point. Feel free to suggest._
+_Honestly who really knows at this point? Feel free to suggest._
 
 #### Tracer
 * Mei 
