@@ -355,14 +355,19 @@ $(function() {
     function setHeight(){
 		teamHeight = $(".team").innerHeight();
 		buttonHeight = $(".team-button-container").innerHeight();
-		teamHeight = teamHeight - buttonHeight - 32;
-		//teamHeight = teamHeight - 32;
-		teamGridHeight = $(".team-grid").innerHeight();	 
-		$(".team-grid-placeholder").innerHeight(teamGridHeight);   
+		teamHeight = teamHeight - buttonHeight;
+		//teamHeight = teamHeight - 32;   
+    }
+    
+    function setGridHeight() {
+	    teamGridHeight = $(".team-grid").innerHeight();	
+	    $(".team-grid-placeholder").innerHeight(teamGridHeight);
     }
 
 	setHeight();
+	setGridHeight();
 	$(window).resize(setHeight);
+	$(window).resize(setGridHeight);
 	
 	//Check on Page Load
 	var scroll = $(window).scrollTop();

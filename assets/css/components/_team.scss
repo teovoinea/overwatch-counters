@@ -3,14 +3,17 @@
 // -----------------------------------------------------------------------------
 
 .team {
-	padding:24px 0;
+	padding:8px 0 16px 0;
 	background: $color-blue-dark;
 	box-shadow: 0 0 2px 2px rgba($color-blue-dark,0.3);
+	@include respond($breakpoint-team-grid-small) {
+		padding: 8px 0 32px 0;
+	}
 }
 
 .team-grid {
 	//max-width: 240px;
-	padding:0;
+	padding:8px 0;
 	transform: translate3d(0px,0px,0px);
 	@include respond($breakpoint-team-grid-small) {
 		//max-width: 336px;	
@@ -38,7 +41,6 @@
 	max-width: none;
 	background: $color-blue-dark;
 	z-index: $z_index-level4;
-	padding:8px 0;
 	box-shadow: 0 0 2px 2px rgba($color-blue-dark,0.3);
 	
 }

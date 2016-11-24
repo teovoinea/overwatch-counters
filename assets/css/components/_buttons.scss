@@ -3,7 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .button-container {
-	padding-top:24px;
+	padding-top:8px;
+	@include respond($breakpoint-team-grid-small) {
+	padding-top:16px;
+	}
 }
 .btn {
 	background:$color-orange;
