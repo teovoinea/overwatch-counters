@@ -22,10 +22,11 @@
 
 .team-grid-placeholder {
 	width:100%;
-	position: absolute;
+	//position: absolute;
+	display: none;
 	transform: translate3d(0px,0px,0px);
-	&.is-relative {
-		position: relative;
+	&.is-active {
+		display: block;
 	}
 }
 
