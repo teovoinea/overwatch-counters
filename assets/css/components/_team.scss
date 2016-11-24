@@ -9,14 +9,14 @@
 }
 
 .team-grid {
-	max-width: 240px;
+	//max-width: 240px;
 	padding:0;
 	transform: translate3d(0px,0px,0px);
 	@include respond($breakpoint-team-grid-small) {
-		max-width: 336px;	
+		//max-width: 336px;	
 	}
 	@include respond($breakpoint-team-grid-six) {
-		max-width: 1200px;
+		//max-width: 1200px;
 	}
 }
 
