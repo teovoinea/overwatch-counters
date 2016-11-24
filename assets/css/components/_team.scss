@@ -23,6 +23,7 @@
 .team-grid-placeholder {
 	width:100%;
 	position: absolute;
+	transform: translate3d(0px,0px,0px);
 	&.is-relative {
 		position: relative;
 	}
