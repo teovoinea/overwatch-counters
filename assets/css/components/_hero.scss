@@ -3,7 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .hero {
-	padding:32px 0 64px 0;
+	padding:16px 0 32px 0;
+	@include respond($breakpoint-team-grid-small) {
+		padding: 32px 0 64px 0;
+	}
 }
 
 

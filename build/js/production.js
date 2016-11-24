@@ -357,8 +357,8 @@ $(function() {
     //Set the Height that we're going to make it sticky at
     function setHeight(){
 		teamHeight = $(".team").innerHeight();
-		buttonHeight = $(".team-button-container").innerHeight();
-		teamHeight = teamHeight - buttonHeight - 84;
+			//buttonHeight = $(".team-button-container").innerHeight();
+			//teamHeight = teamHeight - buttonHeight;
 		teamGridHeight = $(".team-grid").innerHeight();	    
     }
 
@@ -367,7 +367,7 @@ $(function() {
 	
 	//Check on Page Load
 	var scroll = $(window).scrollTop();
-    if (scroll >= teamHeight) {
+    if (scroll >= teamHeight - 64) {
         teamGrid.addClass("is-sticky");
         $(".team-grid-placeholder").innerHeight(teamGridHeight);
     } else {
@@ -378,7 +378,7 @@ $(function() {
 	//Check on Scroll
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= teamHeight) {
+        if (scroll >= teamHeight - 64) {
             teamGrid.addClass("is-sticky");
             $(".team-grid-placeholder").innerHeight(teamGridHeight);
         } else {
