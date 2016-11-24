@@ -21,8 +21,11 @@
 }
 
 .team-grid-placeholder {
-	height:0;
 	width:100%;
+	position: absolute;
+	&.is-relative {
+		position: relative;
+	}
 }
 
 .team-grid.is-sticky {
@@ -35,4 +38,5 @@
 	z-index: $z_index-level4;
 	padding:8px 0;
 	box-shadow: 0 0 2px 2px rgba($color-blue-dark,0.3);
+	
 }

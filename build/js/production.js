@@ -357,9 +357,11 @@ $(function() {
     //Set the Height that we're going to make it sticky at
     function setHeight(){
 		teamHeight = $(".team").innerHeight();
-			//buttonHeight = $(".team-button-container").innerHeight();
-			//teamHeight = teamHeight - buttonHeight;
-		teamGridHeight = $(".team-grid").innerHeight();	    
+		//buttonHeight = $(".team-button-container").innerHeight();
+		//teamHeight = teamHeight - buttonHeight - 84;
+		teamHeight = teamHeight - 32;
+		teamGridHeight = $(".team-grid").innerHeight();	 
+		$(".team-grid-placeholder").innerHeight(teamGridHeight);   
     }
 
 	setHeight();
@@ -367,24 +369,28 @@ $(function() {
 	
 	//Check on Page Load
 	var scroll = $(window).scrollTop();
-    if (scroll >= teamHeight - 64) {
+    if (scroll >= teamHeight) {
         teamGrid.addClass("is-sticky");
-        $(".team-grid-placeholder").innerHeight(teamGridHeight);
+        //$(".team-grid-placeholder").innerHeight(teamGridHeight);
+        $(".team-grid-placeholder").addClass("is-relative");
     } else {
         teamGrid.removeClass("is-sticky");
-        $(".team-grid-placeholder").innerHeight(0);
+        $(".team-grid-placeholder").removeClass("is-relative");
+        //$(".team-grid-placeholder").innerHeight(0);
     }
 
 	//Check on Scroll
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= teamHeight - 64) {
-            teamGrid.addClass("is-sticky");
-            $(".team-grid-placeholder").innerHeight(teamGridHeight);
-        } else {
-            teamGrid.removeClass("is-sticky");
-            $(".team-grid-placeholder").innerHeight(0);
-        }
+         if (scroll >= teamHeight) {
+	        teamGrid.addClass("is-sticky");
+	        //$(".team-grid-placeholder").innerHeight(teamGridHeight);
+	        $(".team-grid-placeholder").addClass("is-relative");
+	    } else {
+	        teamGrid.removeClass("is-sticky");
+	        $(".team-grid-placeholder").removeClass("is-relative");
+	        //$(".team-grid-placeholder").innerHeight(0);
+	    }
     });
     
     
